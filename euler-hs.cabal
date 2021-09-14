@@ -10,7 +10,7 @@ description:    Please see the README on GitHub at <https://github.com/janreggie
 homepage:       https://github.com/janreggie/euler-hs#readme
 bug-reports:    https://github.com/janreggie/euler-hs/issues
 author:         Jan Reggie Dela Cruz
-license:        BSD3
+license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
@@ -22,6 +22,9 @@ source-repository head
   location: https://github.com/janreggie/euler-hs
 
 library
+  exposed-modules:
+      Solutions.P1
+      Solver
   other-modules:
       Paths_euler_hs
   hs-source-dirs:
