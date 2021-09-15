@@ -13,7 +13,8 @@ data Answer = Answer
 answers :: [Answer]
 answers =
   [ Answer 1 Nothing 233168,
-    Answer 2 Nothing 4613732
+    Answer 2 Nothing 4613732,
+    Answer 3 Nothing 6857
   ]
 
 testCases = map toTestCase answers

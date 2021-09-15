@@ -25,6 +25,7 @@ library
   exposed-modules:
       Solutions.P1
       Solutions.P2
+      Solutions.P3
       Solver
   other-modules:
       Paths_euler_hs
