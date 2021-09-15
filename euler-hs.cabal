@@ -31,6 +31,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , optparse-applicative >=0.16.1.0 && <0.17
   default-language: Haskell2010
 
 executable euler-hs-exe
@@ -43,6 +44,7 @@ executable euler-hs-exe
   build-depends:
       base >=4.7 && <5
     , euler-hs
+    , optparse-applicative >=0.16.1.0 && <0.17
   default-language: Haskell2010
 
 test-suite euler-hs-test
@@ -56,4 +58,5 @@ test-suite euler-hs-test
   build-depends:
       base >=4.7 && <5
     , euler-hs
+    , optparse-applicative >=0.16.1.0 && <0.17
   default-language: Haskell2010
