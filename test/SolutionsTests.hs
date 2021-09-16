@@ -17,7 +17,8 @@ answers =
     Answer 3 Nothing 6857,
     Answer 4 Nothing 906609,
     Answer 5 Nothing 232792560,
-    Answer 6 Nothing 25164150
+    Answer 6 Nothing 25164150,
+    Answer 7 Nothing 104743
   ]
 
 testCases = map toTestCase answers
