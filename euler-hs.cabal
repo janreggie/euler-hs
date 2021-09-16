@@ -23,9 +23,11 @@ source-repository head
 
 library
   exposed-modules:
+      Helpers
       Solutions.P1
       Solutions.P2
       Solutions.P3
+      Solutions.P4
       Solver
   other-modules:
       Paths_euler_hs
