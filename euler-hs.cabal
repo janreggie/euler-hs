@@ -29,6 +29,7 @@ library
       Solutions.P3
       Solutions.P4
       Solutions.P5
+      Solutions.P6
       Solver
   other-modules:
       Paths_euler_hs

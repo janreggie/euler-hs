@@ -5,6 +5,7 @@ import Solutions.P2 (p2)
 import Solutions.P3 (p3)
 import Solutions.P4 (p4)
 import Solutions.P5 (p5)
+import Solutions.P6 (p6)
 
 -- | wrapper for all Solution functions
 solver :: Integer -> Maybe String -> Integer
@@ -13,4 +14,5 @@ solver 2 = p2
 solver 3 = p3
 solver 4 = p4
 solver 5 = p5
+solver 6 = p6
 solver _ = error "Unimplemented"
