@@ -8,6 +8,7 @@ import Solutions.P5 (p5)
 import Solutions.P6 (p6)
 import Solutions.P7 (p7)
 import Solutions.P8 (p8)
+import Solutions.P9 (p9)
 
 -- | wrapper for all Solution functions
 solver :: Integer -> String -> Integer
@@ -19,4 +20,5 @@ solver 5 = p5
 solver 6 = p6
 solver 7 = p7
 solver 8 = p8
+solver 9 = p9
 solver _ = error "Unimplemented"
