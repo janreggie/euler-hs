@@ -1,6 +1,6 @@
 module Solutions.P3 (p3) where
 
-p3 :: Maybe String -> Integer
+p3 :: String -> Integer
 p3 _ = getLargestPrime 600851475143
 
 getLargestPrime num = iter num 2

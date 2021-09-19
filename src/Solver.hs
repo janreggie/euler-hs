@@ -10,7 +10,7 @@ import Solutions.P7 (p7)
 import Solutions.P8 (p8)
 
 -- | wrapper for all Solution functions
-solver :: Integer -> Maybe String -> Integer
+solver :: Integer -> String -> Integer
 solver 1 = p1
 solver 2 = p2
 solver 3 = p3

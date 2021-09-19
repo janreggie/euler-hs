@@ -2,7 +2,7 @@ module Solutions.P4 (p4) where
 
 import Helpers (isqrt)
 
-p4 :: Maybe String -> Integer
+p4 :: String -> Integer
 p4 _ = head $ filter isProductOfThrees $ map makePalindrome [999, 998 .. 100]
 
 makePalindrome :: Integer -> Integer

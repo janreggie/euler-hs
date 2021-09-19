@@ -1,6 +1,6 @@
 module Solutions.P6 (p6) where
 
-p6 :: Maybe String -> Integer
+p6 :: String -> Integer
 p6 _ = sq (sum [1 .. x]) - sum (map sq [1 .. x])
   where
     x = 100

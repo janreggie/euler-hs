@@ -6,20 +6,20 @@ import Test.Tasty.HUnit (assertEqual, testCase)
 
 data Answer = Answer
   { problemNumber :: Integer,
-    inputText :: Maybe String,
+    inputText :: String,
     expected :: Integer
   }
 
 answers :: [Answer]
 answers =
-  [ Answer 1 Nothing 233168,
-    Answer 2 Nothing 4613732,
-    Answer 3 Nothing 6857,
-    Answer 4 Nothing 906609,
-    Answer 5 Nothing 232792560,
-    Answer 6 Nothing 25164150,
-    Answer 7 Nothing 104743,
-    Answer 8 Nothing 23514624000
+  [ Answer 1 "" 233168,
+    Answer 2 "" 4613732,
+    Answer 3 "" 6857,
+    Answer 4 "" 906609,
+    Answer 5 "" 232792560,
+    Answer 6 "" 25164150,
+    Answer 7 "" 104743,
+    Answer 8 "" 23514624000
   ]
 
 testCases = map toTestCase answers
@@ -31,8 +31,8 @@ testCases = map toTestCase answers
 
     display (Answer probNo inputTxt expected) =
       "Problem " ++ show probNo ++ showInput inputTxt ++ " should result to " ++ show expected
-    showInput Nothing = ""
-    showInput (Just s) = " with input " ++ s
+    showInput "" = ""
+    showInput s = " with input " ++ s
 
 main :: IO ()
 main = do

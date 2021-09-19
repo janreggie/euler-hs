@@ -56,7 +56,7 @@ main = interpretParams =<< execParser opts
         )
 
 interpretParams :: Parameters -> IO ()
-interpretParams (Parameters x "") = print (solver x Nothing)
+interpretParams (Parameters x "") = print (solver x "")
 interpretParams (Parameters x filename) = do
   s <- readFile filename
-  print (solver x (Just s))
+  print (solver x s)

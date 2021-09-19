@@ -5,7 +5,7 @@ module Solutions.P1 (p1) where
 -- Find the sum of all the multiples of 3 or 5 below 1000.
 --
 -- This is a simple exclusion-inclusion principle problem.
-p1 :: Maybe String -> Integer
+p1 :: String -> Integer
 p1 _ = sumOfMultiples 3 999 + sumOfMultiples 5 999 - sumOfMultiples 15 999
 
 -- | find the sum of multiples of k that are less than n.
