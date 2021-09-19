@@ -25,6 +25,7 @@ library
   exposed-modules:
       Helpers
       Solutions.P1
+      Solutions.P10
       Solutions.P2
       Solutions.P3
       Solutions.P4
