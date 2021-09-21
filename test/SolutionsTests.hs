@@ -23,7 +23,8 @@ answers =
     Answer 9 "" 31875000,
     Answer 10 "" 142913828922,
     Answer 11 "" 70600674,
-    Answer 12 "" 76576500
+    Answer 12 "" 76576500,
+    Answer 13 "" 5537376230
   ]
 
 testCases = map toTestCase answers

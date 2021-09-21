@@ -4,6 +4,7 @@ import Solutions.P1 (p1)
 import Solutions.P10 (p10)
 import Solutions.P11 (p11)
 import Solutions.P12 (p12)
+import Solutions.P13 (p13)
 import Solutions.P2 (p2)
 import Solutions.P3 (p3)
 import Solutions.P4 (p4)
@@ -27,4 +28,5 @@ solver 9 = p9
 solver 10 = p10
 solver 11 = p11
 solver 12 = p12
+solver 13 = p13
 solver _ = error "Unimplemented"

@@ -1,4 +1,4 @@
-module Solutions.P12 where
+module Solutions.P12 (p12) where
 
 import Helpers (countDivisors)
 
