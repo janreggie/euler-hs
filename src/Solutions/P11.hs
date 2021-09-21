@@ -2,6 +2,10 @@ module Solutions.P11 (p11) where
 
 import Data.List (transpose)
 
+-- Get the maximum product of four consecutive numbers (rows, cols, diagonals) in a given grid.
+-- Solution: map the grid into its rows, cols, and diagonals,
+-- and then get the highest maxFour for each row/col/diag.
+
 p11 :: String -> Integer
 p11 _ = maximum [maxRows, maxCols, maxDiag1, maxDiag2]
   where
