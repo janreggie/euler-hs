@@ -1,14 +1,14 @@
-name:                euler-hs
-version:             0.1.0.0
-github:              "janreggie/euler-hs"
-license:             MIT
-author:              "Jan Reggie Dela Cruz"
-maintainer:          ""
-copyright:           ""
+name: euler-hs
+version: 0.1.0.0
+github: "janreggie/euler-hs"
+license: MIT
+author: "Jan Reggie Dela Cruz"
+maintainer: ""
+copyright: ""
 
 extra-source-files:
-- README.md
-- ChangeLog.md
+  - README.md
+  - ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
@@ -17,36 +17,38 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/janreggie/euler-hs#readme>
+description: Please see the README on GitHub at <https://github.com/janreggie/euler-hs#readme>
 
 dependencies:
-- base >= 4.7 && < 5
-- optparse-applicative >=0.16.1.0 && <0.17
-- split >= 0.2.3.4 && < 0.3
+  - base >= 4.7 && < 5
+  - optparse-applicative >=0.16.1.0 && <0.17
+  - split >= 0.2.3.4 && < 0.3
+  - containers >= 0.6.5.1 && < 0.7
+  - vector >= 0.12.3.1 && < 0.13
 
 library:
   source-dirs: src
 
 executables:
   euler-hs-exe:
-    main:                Main.hs
-    source-dirs:         app
+    main: Main.hs
+    source-dirs: app
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - euler-hs
+      - euler-hs
 
 tests:
   euler-hs-test:
-    main:                SolutionsTests.hs
-    source-dirs:         test
+    main: SolutionsTests.hs
+    source-dirs: test
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - euler-hs
-    - tasty
-    - tasty-hunit
+      - euler-hs
+      - tasty
+      - tasty-hunit

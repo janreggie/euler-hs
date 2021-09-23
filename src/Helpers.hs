@@ -1,5 +1,7 @@
 module Helpers where
 
+import qualified Data.IntMap.Lazy as IM
+
 -- | integer square root
 isqrt :: Integral p => p -> p
 isqrt 0 = 0
@@ -43,3 +45,23 @@ primeFactorization x = iter x 0 primes
 -- | counts the number of divisors of a number
 countDivisors :: Integer -> Integer
 countDivisors = product . map (+ 1) . primeFactorization
+
+-- | gets the Collatz number of a given number,
+-- e.g., map collatz [1, 2, 4, 8, 16, 5] = [0, 1, 2, 3, 4, 5]
+collatz :: Int -> Integer
+collatz x
+  | x == 1 = 0
+  | even x = 1 + collatz (x `div` 2)
+  | otherwise = 1 + collatz (3 * x + 1)
+
+-- | collatz but with memoization in the form of a Map.
+-- See Solutions.P14.p14 on how this is used.
+collatzWithMemo :: Int -> IM.IntMap Integer -> (Integer, IM.IntMap Integer)
+collatzWithMemo x memo = case IM.lookup x memo of
+  Just v -> (toInteger v, memo)
+  Nothing
+    | x == 1 -> (0, IM.insert 1 0 memo)
+    | otherwise -> (1 + v', IM.insert x v' m)
+    where
+      x' = if even x then x `div` 2 else 3 * x + 1
+      (v', m) = collatzWithMemo x' memo

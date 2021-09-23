@@ -3,7 +3,35 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: containers-0.6.5.1@sha256:a029734132bb3471f8a91e3deaa095581a97410c405a1c665643053db87d87c1,2596
+    pantry-tree:
+      size: 2823
+      sha256: 86234e3221f6fa50e82d860a8428005ac3ff19fea92103ff79a3047cd5cd1625
+  original:
+    hackage: containers-0.6.5.1
+- completed:
+    hackage: optparse-applicative-0.16.1.0@sha256:16ebd7054b2265c1aad16c1d19dc503695fbfc67b35203d9952fd577d08c0110,4982
+    pantry-tree:
+      size: 2979
+      sha256: 0d4a0d442f7f25d35e88f5f30099763c512e3c8fefe2ebccebd82cead4000021
+  original:
+    hackage: optparse-applicative-0.16.1.0
+- completed:
+    hackage: split-0.2.3.4@sha256:048c75891d63a03828f97667214aaaf0e67b7dcbfec297753e39939ffda6f51a,2647
+    pantry-tree:
+      size: 439
+      sha256: 72c550dd427dc15a2195e16c84bdb4712060fe601d87e95674154b44403550d9
+  original:
+    hackage: split-0.2.3.4
+- completed:
+    hackage: vector-0.12.3.1@sha256:672884b271c15501f1398dc1755c435d3659cf9aa77144c0316d055b5fbdfa82,7932
+    pantry-tree:
+      size: 3842
+      sha256: 7201fd69d4558190fa28b3cc0a5e21a47453647c5ccb23d949a63ba07f0ef8b9
+  original:
+    hackage: vector-0.12.3.1
 snapshots:
 - completed:
     size: 587113
