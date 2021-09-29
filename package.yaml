@@ -21,10 +21,10 @@ description: Please see the README on GitHub at <https://github.com/janreggie/eu
 
 dependencies:
   - base >= 4.7 && < 5
-  - optparse-applicative >=0.16.1.0 && <0.17
-  - split >= 0.2.3.4 && < 0.3
-  - containers >= 0.6.5.1 && < 0.7
-  - vector >= 0.12.3.1 && < 0.13
+  - optparse-applicative
+  - split
+  - containers
+  - vector
 
 library:
   source-dirs: src
