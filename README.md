@@ -1,5 +1,7 @@
 # euler-hs
 
+![Banner for Project Euler](https://projecteuler.net/profile/forswear.png)
+
 Implementations of problems in [Project Euler](https://projecteuler.net/)
 in, yes, Haskell.
 
