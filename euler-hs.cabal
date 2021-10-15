@@ -37,6 +37,7 @@ library
       Solutions.P19
       Solutions.P2
       Solutions.P20
+      Solutions.P21
       Solutions.P3
       Solutions.P4
       Solutions.P5
@@ -50,7 +51,8 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
     , containers
     , optparse-applicative
     , split
@@ -65,7 +67,8 @@ executable euler-hs-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
     , containers
     , euler-hs
     , optparse-applicative
@@ -82,7 +85,8 @@ test-suite euler-hs-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
     , containers
     , euler-hs
     , optparse-applicative

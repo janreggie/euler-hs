@@ -46,6 +46,13 @@ primeFactorization x = iter x 0 primes
 countDivisors :: Integer -> Integer
 countDivisors = product . map (+ 1) . primeFactorization
 
+-- | sum of all divisors of a number, including itself
+sumOfDivisors :: Integer -> Integer
+sumOfDivisors x = product (zipWith tt primes (primeFactorization x))
+  where
+    tt :: Integer -> Integer -> Integer
+    tt p e = sum $ map (p ^) [0 .. e]
+
 -- | gets the Collatz number of a given number,
 -- e.g., map collatz [1, 2, 4, 8, 16, 5] = [0, 1, 2, 3, 4, 5]
 collatz :: Int -> Integer

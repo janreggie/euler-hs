@@ -25,6 +25,7 @@ dependencies:
   - split
   - containers
   - vector
+  - array
 
 library:
   source-dirs: src
