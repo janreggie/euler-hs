@@ -33,6 +33,7 @@ answers =
     Answer 19 "" 171,
     Answer 20 "" 648,
     Answer 21 "" 31626
+    -- Answer 22 "" 4179871 -- very slow!!
   ]
 
 testCases = map toTestCase answers
