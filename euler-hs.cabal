@@ -24,6 +24,7 @@ source-repository head
 library
   exposed-modules:
       Helpers
+      Helpers.Scientific
       Solutions.P1
       Solutions.P10
       Solutions.P11
@@ -40,6 +41,8 @@ library
       Solutions.P21
       Solutions.P22
       Solutions.P23
+      Solutions.P24
+      Solutions.P25
       Solutions.P3
       Solutions.P4
       Solutions.P5

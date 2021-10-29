@@ -72,3 +72,9 @@ collatzWithMemo x memo = case IM.lookup x memo of
     where
       x' = if even x then x `div` 2 else 3 * x + 1
       (v', m) = collatzWithMemo x' memo
+
+-- | fibonacci numbers. Starts with [0,1,1,...]
+fibonacci :: (Num a) => [a]
+fibonacci = fibo 0 1
+  where
+    fibo a b = a : fibo b (a + b)
