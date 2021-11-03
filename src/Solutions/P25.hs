@@ -1,4 +1,4 @@
-module Solutions.P25 where -- TODO: (p25)
+module Solutions.P25 (p25) where
 
 import Helpers (fibonacci)
 import Helpers.Scientific (Scientific (..))
