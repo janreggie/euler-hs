@@ -1,7 +1,6 @@
 module Solutions.P14 (p14) where
 
 import qualified Data.IntMap as IM
-import Helpers (collatz, collatzWithMemo)
 
 p14 :: String -> Integer
 p14 _ = findFurthest (1, 0) IM.empty [1 .. 999999]
@@ -14,12 +13,22 @@ findFurthest (holder, value) memo (x : xs)
   where
     (value', memo') = collatzWithMemo x memo
 
--- The following solution may actually be *faster* than using a memo!
--- p14 _ = iter (1, 0) [1 .. 999999]
--- iter :: (Int, Integer) -> [Int] -> Integer
--- iter (holder, value) [] = toInteger holder
--- iter (holder, value) (x : xs)
---   | v' > value = iter (x, v') xs
---   | otherwise = iter (holder, value) xs
---   where
---     v' = collatz x
+-- | gets the Collatz number of a given number,
+-- e.g., map collatz [1, 2, 4, 8, 16, 5] = [0, 1, 2, 3, 4, 5]
+collatz :: Int -> Integer
+collatz x
+  | x == 1 = 0
+  | even x = 1 + collatz (x `div` 2)
+  | otherwise = 1 + collatz (3 * x + 1)
+
+-- | collatz but with memoization in the form of a Map.
+-- See Solutions.P14.p14 on how this is used.
+collatzWithMemo :: Int -> IM.IntMap Integer -> (Integer, IM.IntMap Integer)
+collatzWithMemo x memo = case IM.lookup x memo of
+  Just v -> (toInteger v, memo)
+  Nothing
+    | x == 1 -> (0, IM.insert 1 0 memo)
+    | otherwise -> (1 + v', IM.insert x v' m)
+    where
+      x' = if even x then x `div` 2 else 3 * x + 1
+      (v', m) = collatzWithMemo x' memo

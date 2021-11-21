@@ -1,5 +1,7 @@
 module Solutions.P23 (p23) where
 
+-- TODO: Currently takes 6 minutes. Can this be made faster?!
+
 import qualified Data.IntMap.Lazy as IM
 import Helpers (sumOfDivisors)
 

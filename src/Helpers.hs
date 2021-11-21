@@ -27,6 +27,14 @@ primes = 2 : 3 : sieve (tail primes) [5, 7 ..]
       where
         (h, ~(_ : t)) = span (< p * p) xs
 
+-- | returns whether a number is prime
+isPrime :: Integer -> Bool
+isPrime = eval . primeFactorization
+  where
+    eval (0 : xs) = eval xs
+    eval (1 : xs) = null xs
+    eval _ = False
+
 -- | prime factorization of a number such that
 --
 --  product $ zipWith (^) (primeFactorization x) primes == x.
@@ -52,26 +60,6 @@ sumOfDivisors x = product (zipWith tt primes (primeFactorization x))
   where
     tt :: Integer -> Integer -> Integer
     tt p e = sum $ map (p ^) [0 .. e]
-
--- | gets the Collatz number of a given number,
--- e.g., map collatz [1, 2, 4, 8, 16, 5] = [0, 1, 2, 3, 4, 5]
-collatz :: Int -> Integer
-collatz x
-  | x == 1 = 0
-  | even x = 1 + collatz (x `div` 2)
-  | otherwise = 1 + collatz (3 * x + 1)
-
--- | collatz but with memoization in the form of a Map.
--- See Solutions.P14.p14 on how this is used.
-collatzWithMemo :: Int -> IM.IntMap Integer -> (Integer, IM.IntMap Integer)
-collatzWithMemo x memo = case IM.lookup x memo of
-  Just v -> (toInteger v, memo)
-  Nothing
-    | x == 1 -> (0, IM.insert 1 0 memo)
-    | otherwise -> (1 + v', IM.insert x v' m)
-    where
-      x' = if even x then x `div` 2 else 3 * x + 1
-      (v', m) = collatzWithMemo x' memo
 
 -- | fibonacci numbers. Starts with [0,1,1,...]
 fibonacci :: (Num a) => [a]
