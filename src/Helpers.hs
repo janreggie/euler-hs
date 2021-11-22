@@ -29,11 +29,13 @@ primes = 2 : 3 : sieve (tail primes) [5, 7 ..]
 
 -- | returns whether a number is prime
 isPrime :: Integer -> Bool
-isPrime = eval . primeFactorization
+isPrime x = iter 2 x
   where
-    eval (0 : xs) = eval xs
-    eval (1 : xs) = null xs
-    eval _ = False
+    iter d x
+      | d >= mx = True
+      | x `rem` d == 0 = False
+      | otherwise = iter (d + 1) x
+    mx = isqrt x
 
 -- | prime factorization of a number such that
 --
