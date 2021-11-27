@@ -37,6 +37,7 @@ answers =
     Answer 24 "" 2783915460,
     Answer 25 "" 4782,
     Answer 26 "" 983,
+    Answer 28 "" 669171001,
     Answer 30 "" 443839,
     Answer 41 "" 7652413 -- slow!!
   ]
