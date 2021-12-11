@@ -29,7 +29,9 @@ primes = 2 : 3 : sieve (tail primes) [5, 7 ..]
 
 -- | returns whether a number is prime
 isPrime :: Integer -> Bool
-isPrime x = iter 2 x
+isPrime x
+  | x < 2 = False
+  | otherwise = iter 2 x
   where
     iter d x
       | d >= mx = True
@@ -68,3 +70,11 @@ fibonacci :: (Num a) => [a]
 fibonacci = fibo 0 1
   where
     fibo a b = a : fibo b (a + b)
+
+-- | mergeDigits [1,2,3] = 123
+mergeDigits :: Num a => [a] -> a
+mergeDigits = iter . reverse
+  where
+    iter [] = 0
+    iter [x] = x
+    iter (x : xs) = iter xs * 10 + x

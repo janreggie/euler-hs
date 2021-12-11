@@ -1,5 +1,7 @@
 module Solutions.P24 (p24) where
 
+import Helpers (mergeDigits)
+
 p24 :: String -> Integer
 p24 _ = mergeDigits (permutations [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] !! 999999)
 
@@ -17,11 +19,3 @@ takeDropList xs = iter [] xs
     iter :: [a] -> [a] -> [(a, [a])]
     iter _ [] = []
     iter ys (x : xs) = (x, ys ++ xs) : iter (ys ++ [x]) xs
-
--- mergeDigits [1,2,3] = 123
-mergeDigits :: Num a => [a] -> a
-mergeDigits = iter . reverse
-  where
-    iter [] = 0
-    iter [x] = x
-    iter (x : xs) = iter xs * 10 + x
