@@ -26,6 +26,7 @@ import Solutions.P38 (p38)
 import Solutions.P4 (p4)
 import Solutions.P41 (p41)
 import Solutions.P45 (p45)
+import Solutions.P48 (p48)
 import Solutions.P5 (p5)
 import Solutions.P6 (p6)
 import Solutions.P7 (p7)
@@ -65,4 +66,5 @@ solver 30 = p30
 solver 38 = p38
 solver 41 = p41
 solver 45 = p45
+solver 48 = p48
 solver _ = error "Unimplemented"
